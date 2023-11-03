@@ -47,29 +47,130 @@ table {
 }
 /* Reset CSS Above*/
 
+
+
 html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #020659;
+    
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 375px;
     margin: 0 auto;
     background-color: #ffffff;
+    color: #590242;
 }
+
+header{
+    background: linear-gradient(to right, #2104d9,#000);
+    color: #ffffff;
+    margin-top: 50px;
+    padding: 10px 30px 30px 30px;
+}
+
+nav{
+    width: 100%;
+    height: 7%;
+    max-width: 375px;
+    background-color: #030A8C;
+    position: absolute;
+    top: 0;
+}
+
+ul a{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    padding: 10px 0 10px 0;
+}
+
+#homebutton { 
+    font-variant: small-caps;
+    font-size: 30px;
+}
+
+#playlists {
+    background-color: #2699fb;
+    color:#ffffff;
+}
+
+#playlists h3{
+    text-align: center;
+}
+
+#playlists section{
+    background-color:#0d8dFB;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#curated {
+    background-color:#030A8C;
+    color:#ffffff;
+}
+
+#curated section{
+    background-color:#020659;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#curated h3, p{
+    text-align: center;
+}
+
+/* Text Styling */
 
 h1 {
     font-size:1.25em;
+}
+
+dl{
+    display: flex;
+}
+
+dt{
+    font-style: italic;
+}
+
+h2{
+    margin-left: 30px;
 }
 
 h2, h3 {
     font-size: 1em;
 }
 
+h1, h2, h3{
+    text-transform: uppercase; 
+}
+
 p, dl, dd {
     font-size: 1em;
 }
 
-footer p {font-size: .75em;
+footer p {
+    font-size: .75em;
+    text-align: center;
+    color: #590242;
+}
+
+button{
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 0 30px 30px;
 }
 
 /* Menu.txt code*/
@@ -103,6 +204,7 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
+
 label span:before {
     top: 5px;
 }
@@ -127,6 +229,87 @@ input:checked ~ label span:after {
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
+
+/* Custom Audio Players */
+
+audio::-webkit-media-controls-mute-button {
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background: rgba(255, 255, 255, .5);
+}
+
+
+/* Custom Scroll */
+
+.scroll{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll section{
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div{
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 5px;
+    height: 70px;
+    width: 350px;
+}
+
+audio{
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+
+
+#trending ::-webkit-scrollbar {
+    width: 16px;
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
 
 @media screen and (min-width:834px) {
     ul {
